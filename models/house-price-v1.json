@@ -1,0 +1,5 @@
+{
+  "name": "house-price",
+  "version": "1.0.0",
+  "weights": {"sqft": 180, "bedrooms": 10000}
+}
