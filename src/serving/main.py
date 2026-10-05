@@ -1,7 +1,9 @@
+from serving.ops import router as ops_router
 from fastapi import FastAPI, HTTPException
 from serving.predict import predict
 
 app = FastAPI()
+app.include_router(ops_router, prefix="/v1")
 
 @app.post("/predict")
 def post_predict(body: dict):
