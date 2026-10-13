@@ -1,5 +1,12 @@
 # ML Model Serving API
 
+## Overview
+
+A FastAPI service that serves a versioned house price model from a local weight file. `POST /predict` loads `models/house-price-v1.json` and scores a house from square feet and bedrooms. A request missing either feature is rejected, and the endpoint never retrains the model. The README also describes a `/v1` ops plane for workspaces, tenant isolation, job approval and audit.
+
+- **Built with:** Python, FastAPI, pytest, GitHub Actions
+- **Scope:** Local lab with tests; one fixed model version and no training pipeline.
+
 <!-- project-guide:start -->
 ## Project guide
 
